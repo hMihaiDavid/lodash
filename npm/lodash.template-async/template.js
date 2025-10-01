@@ -1,14 +1,22 @@
-import assignInWith from './assignInWith.js';
-import attempt from './attempt.js';
-import baseValues from './_baseValues.js';
-import customDefaultsAssignIn from './_customDefaultsAssignIn.js';
-import escapeStringChar from './_escapeStringChar.js';
-import isError from './isError.js';
-import isIterateeCall from './_isIterateeCall.js';
-import keys from './keys.js';
-import reInterpolate from './_reInterpolate.js';
-import templateSettings from './templateSettings.js';
-import toString from './toString.js';
+/**
+ * Lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize include="template" -o npm/lodash.template-async/`
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+var assignInWith = require('./assignInWith'),
+    attempt = require('./attempt'),
+    baseValues = require('./_baseValues'),
+    customDefaultsAssignIn = require('./_customDefaultsAssignIn'),
+    escapeStringChar = require('./_escapeStringChar'),
+    isError = require('./isError'),
+    isIterateeCall = require('./_isIterateeCall'),
+    keys = require('./keys'),
+    reInterpolate = require('./_reInterpolate'),
+    templateSettings = require('./templateSettings'),
+    toString = require('./toString');
 
 /** Error message constants. */
 var INVALID_TEMPL_VAR_ERROR_TEXT = 'Invalid `variable` option passed into `_.template`';
@@ -325,4 +333,4 @@ function template(string, options, guard) {
   return result;
 }
 
-export default template;
+module.exports = template;

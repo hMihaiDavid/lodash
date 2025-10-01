@@ -1,5 +1,5 @@
-import baseIsNative from './_baseIsNative.js';
-import getValue from './_getValue.js';
+var baseIsNative = require('./_baseIsNative'),
+    getValue = require('./_getValue');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -48,4 +48,4 @@ function getNative(object, key) {
   return baseIsNative(value) ? value : undefined;
 }
 
-export default getNative;
+module.exports = getNative;

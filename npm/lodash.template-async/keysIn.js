@@ -1,6 +1,6 @@
-import arrayLikeKeys from './_arrayLikeKeys.js';
-import baseKeysIn from './_baseKeysIn.js';
-import isArrayLike from './isArrayLike.js';
+var arrayLikeKeys = require('./_arrayLikeKeys'),
+    baseKeysIn = require('./_baseKeysIn'),
+    isArrayLike = require('./isArrayLike');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -63,4 +63,4 @@ function keysIn(object) {
   return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
 }
 
-export default keysIn;
+module.exports = keysIn;

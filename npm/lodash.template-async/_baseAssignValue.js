@@ -1,4 +1,4 @@
-import defineProperty from './_defineProperty.js';
+var defineProperty = require('./_defineProperty');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -56,4 +56,4 @@ function baseAssignValue(object, key, value) {
   }
 }
 
-export default baseAssignValue;
+module.exports = baseAssignValue;

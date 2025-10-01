@@ -52,4 +52,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default arrayMap;
+module.exports = arrayMap;

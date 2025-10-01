@@ -1,5 +1,5 @@
-import baseRest from './_baseRest.js';
-import isIterateeCall from './_isIterateeCall.js';
+var baseRest = require('./_baseRest'),
+    isIterateeCall = require('./_isIterateeCall');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -68,4 +68,4 @@ function createAssigner(assigner) {
   });
 }
 
-export default createAssigner;
+module.exports = createAssigner;

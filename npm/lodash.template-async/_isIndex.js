@@ -56,4 +56,4 @@ function isIndex(value, length) {
         (value > -1 && value % 1 == 0 && value < length);
 }
 
-export default isIndex;
+module.exports = isIndex;

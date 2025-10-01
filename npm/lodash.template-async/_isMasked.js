@@ -1,4 +1,4 @@
-import coreJsData from './_coreJsData.js';
+var coreJsData = require('./_coreJsData');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -51,4 +51,4 @@ function isMasked(func) {
   return !!maskSrcKey && (maskSrcKey in func);
 }
 
-export default isMasked;
+module.exports = isMasked;

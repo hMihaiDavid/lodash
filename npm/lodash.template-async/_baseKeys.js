@@ -1,5 +1,5 @@
-import isPrototype from './_isPrototype.js';
-import nativeKeys from './_nativeKeys.js';
+var isPrototype = require('./_isPrototype'),
+    nativeKeys = require('./_nativeKeys');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -61,4 +61,4 @@ function baseKeys(object) {
   return result;
 }
 
-export default baseKeys;
+module.exports = baseKeys;

@@ -1,4 +1,4 @@
-import freeGlobal from './_freeGlobal.js';
+var freeGlobal = require('./_freeGlobal');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -40,4 +40,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default root;
+module.exports = root;

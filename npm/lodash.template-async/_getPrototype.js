@@ -1,4 +1,4 @@
-import overArg from './_overArg.js';
+var overArg = require('./_overArg');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -37,4 +37,4 @@ function trimmedEndIndex(string) {
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
 
-export default getPrototype;
+module.exports = getPrototype;

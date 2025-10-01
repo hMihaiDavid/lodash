@@ -1,4 +1,4 @@
-import basePropertyOf from './_basePropertyOf.js';
+var basePropertyOf = require('./_basePropertyOf');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -52,4 +52,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default escapeHtmlChar;
+module.exports = escapeHtmlChar;

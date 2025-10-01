@@ -45,4 +45,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default basePropertyOf;
+module.exports = basePropertyOf;

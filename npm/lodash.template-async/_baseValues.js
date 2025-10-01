@@ -1,4 +1,4 @@
-import arrayMap from './_arrayMap.js';
+var arrayMap = require('./_arrayMap');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -50,4 +50,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default baseValues;
+module.exports = baseValues;

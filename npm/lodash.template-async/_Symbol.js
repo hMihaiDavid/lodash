@@ -1,4 +1,4 @@
-import root from './_root.js';
+var root = require('./_root');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -37,4 +37,4 @@ function trimmedEndIndex(string) {
 /** Built-in value references. */
 var Symbol = root.Symbol;
 
-export default Symbol;
+module.exports = Symbol;

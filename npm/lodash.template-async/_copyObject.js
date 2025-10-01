@@ -1,5 +1,5 @@
-import assignValue from './_assignValue.js';
-import baseAssignValue from './_baseAssignValue.js';
+var assignValue = require('./_assignValue'),
+    baseAssignValue = require('./_baseAssignValue');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -71,4 +71,4 @@ function copyObject(source, props, object, customizer) {
   return object;
 }
 
-export default copyObject;
+module.exports = copyObject;

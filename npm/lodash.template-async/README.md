@@ -2,7 +2,7 @@
 
 The [Lodash](https://lodash.com/) method `_.template` exported as a [Node.js](https://nodejs.org/) module.
 
-Patched to support generating async functions, when the new option `isAsync` is
+Patched to compile an async functions when the new option `isAsync` is
 set to `true`. If this option is not provided or it is set to `false`, it behaves
 exactly like the original [lodash.template](https://www.npmjs.com/package/lodash.template).
 
@@ -11,11 +11,14 @@ Useful if you need/want to use await inside your templates.
 Currently tracking lodash version `4.17.21`.
 
 Built and published from:
+[https://github.com/hMihaiDavid/lodash/tree/4.17-async-template-npm](https://github.com/hMihaiDavid/lodash/tree/4.17-async-template-npm)
 
+This change is awaiting review, merge and release in official lodash repo:
 [https://github.com/lodash/lodash/pull/6017](https://github.com/lodash/lodash/pull/6017)
 
 When (if?) the pull request gets merged AND the feature is released in lodash,
-this package will be deprecated.
+this package will be deprecated. It will still be usable BUT a deprecation
+message will appear when installing it, recommending to use the upstream lodash.
 
 
 ```bash
@@ -23,15 +26,31 @@ $ npm i --save lodash.template-async
 ```
 
 ```js
-const template = require('lodash.template-async');
-const compiled = template('<% echo(await Promise.resolve(val)) %>', { isAsync: true })
-const res = await compiled({ 'val': 42 });
-console.log(res); // '42'
+import template from 'lodash.template-async';
+
+const compiled = template('<% print(await Promise.resolve(val)) %>', { isAsync: true })
+console.log(await compiled({ 'val': 42 })); // => '42'
 ```
 
-See the [documentation](https://lodash.com/docs#template).
+or, in a `script` and not a `module`:
+
+```js
+const template = require('lodash.template-async');
+const compiled = template('<% print(await Promise.resolve(val)) %>', { isAsync: true })
+
+async function main() {
+  console.log(await compiled({ 'val': 42 })); // => '42'
+}
+
+main();
+```
+
+For more options, see the [documentation](https://lodash.com/docs#template).
 
 Credits to the original authors and contributors to lodash.
+
+This package is unofficial and is  NOT affiliated with lodash,
+the lodash maintainers or the OpenJS foundation.
 
 Following is a copy of the lodash `LICENSE` file.
 

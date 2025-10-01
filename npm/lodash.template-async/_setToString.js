@@ -1,5 +1,5 @@
-import baseSetToString from './_baseSetToString.js';
-import shortOut from './_shortOut.js';
+var baseSetToString = require('./_baseSetToString'),
+    shortOut = require('./_shortOut');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -45,4 +45,4 @@ function trimmedEndIndex(string) {
  */
 var setToString = shortOut(baseSetToString);
 
-export default setToString;
+module.exports = setToString;

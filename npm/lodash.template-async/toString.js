@@ -1,4 +1,4 @@
-import baseToString from './_baseToString.js';
+var baseToString = require('./_baseToString');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -59,4 +59,4 @@ function toString(value) {
   return value == null ? '' : baseToString(value);
 }
 
-export default toString;
+module.exports = toString;

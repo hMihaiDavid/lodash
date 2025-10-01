@@ -1,4 +1,4 @@
-import apply from './_apply.js';
+var apply = require('./_apply');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -67,4 +67,4 @@ function overRest(func, start, transform) {
   };
 }
 
-export default overRest;
+module.exports = overRest;

@@ -46,4 +46,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default overArg;
+module.exports = overArg;

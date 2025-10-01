@@ -1,9 +1,12 @@
 {
   "name": "lodash.template-async",
-  "version": "0.1.0",
+  "version": "0.1.9",
+  "main": "./template.js",
+  "exports": {
+    ".": "./template.js"
+  },
   "description": "The Lodash method `_.template` exported as a module, with async support.",
   "homepage": "https://github.com/lodash/lodash/pull/6017",
-  "main": "template.js",
   "license": "MIT",
   "keywords": "lodash-modularized, template, unofficial",
   "author": "Horia Mihai David <mihaidavid@posteo.net>",

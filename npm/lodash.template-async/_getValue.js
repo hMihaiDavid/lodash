@@ -44,4 +44,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default getValue;
+module.exports = getValue;

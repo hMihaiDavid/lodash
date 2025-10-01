@@ -1,6 +1,6 @@
-import identity from './identity.js';
-import overRest from './_overRest.js';
-import setToString from './_setToString.js';
+var identity = require('./identity'),
+    overRest = require('./_overRest'),
+    setToString = require('./_setToString');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -48,4 +48,4 @@ function baseRest(func, start) {
   return setToString(overRest(func, start, identity), func + '');
 }
 
-export default baseRest;
+module.exports = baseRest;

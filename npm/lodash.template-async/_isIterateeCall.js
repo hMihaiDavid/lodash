@@ -1,7 +1,7 @@
-import eq from './eq.js';
-import isArrayLike from './isArrayLike.js';
-import isIndex from './_isIndex.js';
-import isObject from './isObject.js';
+var eq = require('./eq'),
+    isArrayLike = require('./isArrayLike'),
+    isIndex = require('./_isIndex'),
+    isObject = require('./isObject');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -61,4 +61,4 @@ function isIterateeCall(value, index, object) {
   return false;
 }
 
-export default isIterateeCall;
+module.exports = isIterateeCall;

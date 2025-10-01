@@ -1,6 +1,6 @@
-import baseIsTypedArray from './_baseIsTypedArray.js';
-import baseUnary from './_baseUnary.js';
-import nodeUtil from './_nodeUtil.js';
+var baseIsTypedArray = require('./_baseIsTypedArray'),
+    baseUnary = require('./_baseUnary'),
+    nodeUtil = require('./_nodeUtil');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -58,4 +58,4 @@ function trimmedEndIndex(string) {
  */
 var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
 
-export default isTypedArray;
+module.exports = isTypedArray;

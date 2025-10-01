@@ -1,5 +1,5 @@
-import root from './_root.js';
-import stubFalse from './stubFalse.js';
+var root = require('./_root'),
+    stubFalse = require('./stubFalse');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -69,4 +69,4 @@ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
  */
 var isBuffer = nativeIsBuffer || stubFalse;
 
-export default isBuffer;
+module.exports = isBuffer;

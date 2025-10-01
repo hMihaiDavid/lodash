@@ -1,4 +1,4 @@
-import eq from './eq.js';
+var eq = require('./eq');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -60,4 +60,4 @@ function customDefaultsAssignIn(objValue, srcValue, key, object) {
   return objValue;
 }
 
-export default customDefaultsAssignIn;
+module.exports = customDefaultsAssignIn;

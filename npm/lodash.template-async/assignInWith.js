@@ -1,6 +1,6 @@
-import copyObject from './_copyObject.js';
-import createAssigner from './_createAssigner.js';
-import keysIn from './keysIn.js';
+var copyObject = require('./_copyObject'),
+    createAssigner = require('./_createAssigner'),
+    keysIn = require('./keysIn');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -69,4 +69,4 @@ var assignInWith = createAssigner(function(object, source, srcIndex, customizer)
   copyObject(source, keysIn(source), object, customizer);
 });
 
-export default assignInWith;
+module.exports = assignInWith;

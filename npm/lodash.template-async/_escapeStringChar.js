@@ -53,4 +53,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default escapeStringChar;
+module.exports = escapeStringChar;

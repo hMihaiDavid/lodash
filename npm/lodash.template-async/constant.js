@@ -57,4 +57,4 @@ function constant(value) {
   };
 }
 
-export default constant;
+module.exports = constant;

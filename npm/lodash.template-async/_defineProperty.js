@@ -1,4 +1,4 @@
-import getNative from './_getNative.js';
+var getNative = require('./_getNative');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -42,4 +42,4 @@ var defineProperty = (function() {
   } catch (e) {}
 }());
 
-export default defineProperty;
+module.exports = defineProperty;

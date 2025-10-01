@@ -51,4 +51,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default baseTimes;
+module.exports = baseTimes;

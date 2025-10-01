@@ -57,4 +57,4 @@ function toSource(func) {
   return '';
 }
 
-export default toSource;
+module.exports = toSource;

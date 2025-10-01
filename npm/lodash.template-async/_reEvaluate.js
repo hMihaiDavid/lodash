@@ -35,4 +35,4 @@ function trimmedEndIndex(string) {
   return index;
 }
 
-export default reEvaluate;
+module.exports = reEvaluate;

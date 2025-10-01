@@ -1,5 +1,5 @@
-import isFunction from './isFunction.js';
-import isLength from './isLength.js';
+var isFunction = require('./isFunction'),
+    isLength = require('./isLength');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -64,4 +64,4 @@ function isArrayLike(value) {
   return value != null && isLength(value.length) && !isFunction(value);
 }
 
-export default isArrayLike;
+module.exports = isArrayLike;

@@ -1,4 +1,4 @@
-import Symbol from './_Symbol.js';
+var Symbol = require('./_Symbol');
 
 /** Used to match leading whitespace. */
 var reTrimStart = /^\s+/;
@@ -77,4 +77,4 @@ function getRawTag(value) {
   return result;
 }
 
-export default getRawTag;
+module.exports = getRawTag;
